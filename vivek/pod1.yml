@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8labs
+spec:
+  containers:
+    - name: c1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hello-K8Labs; sleep 5; done"]      

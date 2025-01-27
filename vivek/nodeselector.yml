@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodelabel
+spec:
+  containers:
+    - name: c1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo hi nodeselector; sleep 5 ; done"]
+  nodeSelector: 
+    mynode: vivek  
+

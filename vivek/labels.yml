@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-lable
+  labels: 
+    day: fri
+    class: devops
+spec:
+  containers:
+    - name: labelscont1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo hi labels; sleep 5; done"]     

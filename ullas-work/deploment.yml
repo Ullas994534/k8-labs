@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployments
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      objtype: deployment
+
+  template:
+    metadata:
+      labels:
+        objtype: deployment
+    spec:
+      containers:
+      - name: c00
+        image: ubuntu
+        command: ["/bin/bash", "-c", "while true; do echo Hello-vivek; sleep 5; done"]
